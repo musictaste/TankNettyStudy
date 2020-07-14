@@ -80,7 +80,7 @@ class ServerChildHandler extends ChannelInboundHandlerAdapter { //SimpleChannleI
 		cause.printStackTrace();
 		//删除出现异常的客户端channle，并关闭连接
 		Server.clients.remove(ctx.channel());
-		ctx.close();
+		ctx.close();//ctx关闭，里面的channel也就关闭了
 	}
 	
 	
